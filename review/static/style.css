@@ -1,0 +1,39 @@
+.wrapper {
+  max-width: 100rem;
+  display: flex;
+  justify-content: center;
+}
+.Book {
+  width: 20rem;
+  padding: 1rem;
+}
+.Bookimage {
+}
+.BookTitle {
+  max-width: 12rem;
+  overflow: hidden;
+}
+.Book a {
+  text-decoration: none;
+  color: #2b2b2b;
+}
+.infowrap {
+  border-top: 1px solid #ababab;
+  border-bottom: 1px solid #ababab;
+}
+.Book span {
+  display: block;
+}
+.Bookdesc {
+  color: #ababab;
+}
+.infoWrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.BookBtn {
+  padding: 0.5rem;
+  background-color: cornflowerblue;
+  color: white;
+}

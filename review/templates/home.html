@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% load static %}
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'style.css' %}" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      {% for post in posts %}
+      <div class="Book">
+        <a href="{% url 'detail' post.pk %}"
+          ><img class="Bookimage" src="https://picsum.photos/id/1/320/320"
+        /></a>
+        <div class="infoWrap">
+          <h2 class="BookTitle">
+            <a href="{% url 'detail' post.pk %}">{{ post.title }}</a>
+          </h2>
+          <button class="BookBtn">자세히 보러가기</button>
+        </div>
+        <div class="infowrap">
+          <span class="Bookdesc">{{ post.contents }}</span>
+          <span class="Bookprice">판매가 : {{ post.price }}원</span>
+          <span class="Bookrating">평가점수 : {{ post.rating }}</span>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    <!-- Blog! {% for post in posts %}
+    <li><a href="{% url 'detail' post.pk %}">{{post.title}}</a></li>
+    <br />
+    {% endfor %}
+    <a href="{% url 'new' %}">게시글 생성하기</a> -->
+  </body>
+</html>
