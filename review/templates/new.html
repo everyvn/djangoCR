@@ -8,7 +8,17 @@
   <body>
     <h1>게시글 생성하기</h1>
     <form method="POST">
-      {% csrf_token %} {{form.as_p}}
+      {% csrf_token %}
+      <h2>책 제목 :</h2>
+      {{ form.title }}
+      <h2>책 소개 :</h2>
+      {{ form.contents }}
+      <h2>책 가격 :</h2>
+      {{ form.price }}
+      <h2>책 점수 :</h2>
+      {{ form.rating }}
+      <h2>등록시간 :</h2>
+      {{ form.created_date }}
       <button type="submit">생성하기</button>
     </form>
   </body>

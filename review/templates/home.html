@@ -18,7 +18,9 @@
           <h2 class="BookTitle">
             <a href="{% url 'detail' post.pk %}">{{ post.title }}</a>
           </h2>
-          <button class="BookBtn">자세히 보러가기</button>
+          <a href="{% url 'detail' post.pk %}"
+            ><button class="BookBtn">자세히 보러가기</button></a
+          >
         </div>
         <div class="infowrap">
           <span class="Bookdesc">{{ post.contents }}</span>
@@ -28,6 +30,7 @@
       </div>
       {% endfor %}
     </div>
+    <a href="{% url 'new' %}">생성하기</a>
     <!-- Blog! {% for post in posts %}
     <li><a href="{% url 'detail' post.pk %}">{{post.title}}</a></li>
     <br />
